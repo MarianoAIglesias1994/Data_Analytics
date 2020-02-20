@@ -61,3 +61,10 @@ To continue, a new table is proposed where the first column is **p** (the number
 This procedure is automated in 'Exercise_3_plot.py' script. Also, the following figure is produced in order to show every possible combination from the previous table of solutions (blue circles), and the optimum solution is highlighted (red star). Each point in this graph consists of a **p** number of pirates selected by Morgan and its corresponding **m** (number of coins Morgan receives) in order to verify all conditions.
 
 ![Alt text](exercise_3.png?raw=true "Possible solutions to Morgan's problem and optimum solution")
+
+After solving the exercise via a sort of 'bruteforce' methodology, we can think that perhaps it was very logical for Morgan to take at most half the coins (a bit less, 645/2 = 322.5) and divide the rest between the corresponding number of pirates, one coin for each. 
+
+* In the case he chooses less than 323 pirates, the situation is bad for him because the pirates will start getting two coins each, and the number **m** he receives will be less than the optimum. 
+* And in the case he chooses more than 323 pirates, the situation is bad for him because although the pirates get only one coin, there will be more pirates to divide the treasure.
+
+Therefore this local maximum is also the global maximum in this problem.
