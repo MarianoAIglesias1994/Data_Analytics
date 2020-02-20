@@ -5,19 +5,27 @@
 #import random
 
 # def weighted_random(values, weights):
-# 	total_weight = sum(weights)	# In this line and in the following one, a normalization of the weights is carried out.
-# 	acum_weights = [w / total_weight for w in weights[:]] # I consider it a good idea, since weights might not be given
-# in a normalized format as in the example. But the name might be confusing, as the variable is reused in the next lines.
-# 	for i in range(len(weights)): # Here it seems that it attempts to obtain the cumulative distribution function 
-# (i.e., the accumulated weights).
-# 		acum_weights[i] += acum_weights[i] # But instead, it calculates the double of each element. 
-# For instance, in the example it gets acum_weights = [1.0, 0.6, 0.4].
-# 	rand = random.random() # It generates a random float uniformly distributed in the semi-open range [0.0, 1.0). 
-# This would be the basis to compare against the accumulated weights.
-# 	for value, weight in zip(values, acum_weights): # For each pair value - accumulated weight, 
-# it will map the cumulative distribution function to the uniformly distributed random variable.
-# 		if weight > rand: # It checks if the random float is below the accumulated weigth.
-# 			return value # In that case, the value paired to the accumulated weight should be retrieved.
+# 	total_weight = sum(weights)	
+					# In this line and in the following one, a normalization of the weights is carried out.
+# 	acum_weights = [w / total_weight for w in weights[:]] 
+					# I consider it a good idea, since weights might not be given in a normalized format
+					# as in the example. But the name might be confusing, as the variable is reused in the next lines.
+# 	for i in range(len(weights)): 
+					# Here it seems that it attempts to obtain the cumulative distribution function 
+					# (i.e., the accumulated weights).
+# 		acum_weights[i] += acum_weights[i] 
+					# But instead, it calculates the double of each element. For instance, in the example 
+					# it gets acum_weights = [1.0, 0.6, 0.4].
+# 	rand = random.random() 
+					# It generates a random float uniformly distributed in the semi-open range [0.0, 1.0). 
+					# This would be the basis to compare against the accumulated weights.
+# 	for value, weight in zip(values, acum_weights): 
+					# For each pair value - accumulated weight, it will map the cumulative distribution function
+					# to the uniformly distributed random variable.
+# 		if weight > rand: 
+					# It checks if the random float is below the accumulated weigth.
+# 			return value 
+					# In that case, the value paired to the accumulated weight should be retrieved.
 
 # ------------------------------------------------------------------------------
 # Fixed code
