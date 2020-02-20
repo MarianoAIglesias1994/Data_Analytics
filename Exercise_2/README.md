@@ -73,7 +73,7 @@ GROUP BY device_id
 This modified SQL query does not use the window function. The main idea behind it is that the average of consecutive timestamps can be simplified to the quotient between, the difference of the maximum and minimum timestamp, and the number of timestamps minus 1.
 
 ```math
-$((T_2-T_1) + (T_3-T_2) + … + (T_N-T_{N-1})) / N$  simplifies to $(T_N-T_1) / N-1$
+((T_2-T_1) + (T_3-T_2) + … + (T_N-T_{N-1})) / N  simplifies to (T_N-T_1) / N-1
 ```
 
 The proposed solution is similar to the first part of the original, but adding this simplification trick.
